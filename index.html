@@ -1,0 +1,41 @@
+<html lang="ja">
+<head>
+  <title>それ正解ボックス</title>
+  <meta charset="utf-8">
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="shortcut icon" href="resource/icons/favicon.ico">
+  <!-- <link rel="manifest" href="manifest.json"> -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+      }).catch(function(err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="main_area">
+    <div class="title">
+      <p id="gekiron">激論!</p>
+      <p id="soreseikai">朝までそれ正解!</p>
+    </div>
+    <div class="odai">
+      <p id="initial_text"></p>
+      <p id="main_text"></p>
+    </div>
+    <input type="button" id="next_odai" value="次のお題">
+    <input type="button" id="change_initial" value="頭文字を変更">
+    <div class="memo">
+      <p>「〇」で始まる</p>
+      <textarea id="memo_text" rows="5" maxlength="40"></textarea>
+    </div>
+    <input type="button" id="add_odai" value="お題を投稿">
+  </div>
+
+  <script src="js/main.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+</body>
+</html>
