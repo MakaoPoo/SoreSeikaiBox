@@ -25,7 +25,7 @@ $(function() {
       return;
     }
 
-    const result = window.confirm("「〇」で始まる\n" + memotext + "\n\nを投稿します");
+    const result = window.confirm("｢〇｣で始まる\n" + memotext + "\n\nを投稿します");
     if(result) {
       const dbQuestionList = db.ref('/question_list');
       dbQuestionList.push(memotext);
@@ -39,14 +39,14 @@ $(function() {
     const odaiNum = Math.floor(Math.random() * keyList.length);
     const odaiText = question_list[keyList[odaiNum]];
 
-    $('#initial_text').text("「" + kanaText + "」で始まる");
+    $('#initial_text').text("｢" + kanaText + "｣で始まる");
     $('#main_text').text(odaiText);
   });
 
   $('#change_initial').on('click', function() {
     const kanaText = getRandamKana();
 
-    $('#initial_text').text("「" + kanaText + "」で始まる");
+    $('#initial_text').text("｢" + kanaText + "｣で始まる");
   });
 
   $('.title').on('click', function(e) {
